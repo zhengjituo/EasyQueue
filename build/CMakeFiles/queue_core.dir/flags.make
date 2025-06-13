@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/deepin2024/share/share/vs/vscode/PC/queue/include
+CXX_INCLUDES = -I/home/deepin2024/share/share/vs/git/EasyQueue/include
 
 CXX_FLAGS =  -m64 -std=gnu++17
 

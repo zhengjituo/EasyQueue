@@ -1,4 +1,4 @@
-# Install script for directory: /home/deepin2024/share/share/vs/vscode/PC/queue
+# Install script for directory: /home/deepin2024/share/share/vs/git/EasyQueue
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/deepin2024/share/share/vs/vscode/PC/queue/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/deepin2024/share/share/vs/git/EasyQueue/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

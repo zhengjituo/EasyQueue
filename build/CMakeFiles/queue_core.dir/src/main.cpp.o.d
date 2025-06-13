@@ -1,5 +1,5 @@
 CMakeFiles/queue_core.dir/src/main.cpp.o: \
- /home/deepin2024/share/share/vs/vscode/PC/queue/src/main.cpp \
+ /home/deepin2024/share/share/vs/git/EasyQueue/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/8/iostream \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h \
@@ -133,7 +133,7 @@ CMakeFiles/queue_core.dir/src/main.cpp.o: \
  /usr/include/c++/8/bits/basic_ios.tcc \
  /usr/include/c++/8/bits/ostream.tcc /usr/include/c++/8/istream \
  /usr/include/c++/8/bits/istream.tcc \
- /home/deepin2024/share/share/vs/vscode/PC/queue/src/../include/obtain_release.h \
+ /home/deepin2024/share/share/vs/git/EasyQueue/src/../include/obtain_release.h \
  /usr/include/c++/8/memory /usr/include/c++/8/bits/stl_construct.h \
  /usr/include/c++/8/bits/stl_uninitialized.h /usr/include/c++/8/utility \
  /usr/include/c++/8/bits/stl_relops.h \
@@ -152,7 +152,7 @@ CMakeFiles/queue_core.dir/src/main.cpp.o: \
  /usr/include/c++/8/bits/atomic_base.h \
  /usr/include/c++/8/bits/atomic_lockfree_defines.h \
  /usr/include/c++/8/backward/auto_ptr.h \
- /home/deepin2024/share/share/vs/vscode/PC/queue/src/../include/queue_core.h \
+ /home/deepin2024/share/share/vs/git/EasyQueue/src/../include/queue_core.h \
  /usr/include/c++/8/vector /usr/include/c++/8/bits/stl_vector.h \
  /usr/include/c++/8/bits/stl_bvector.h /usr/include/c++/8/bits/vector.tcc \
  /usr/include/c++/8/mutex /usr/include/c++/8/chrono \
