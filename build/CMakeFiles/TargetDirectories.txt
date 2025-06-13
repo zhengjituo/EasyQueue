@@ -1,0 +1,3 @@
+/home/deepin2024/share/share/vs/vscode/PC/queue/build/CMakeFiles/queue_core.dir
+/home/deepin2024/share/share/vs/vscode/PC/queue/build/CMakeFiles/edit_cache.dir
+/home/deepin2024/share/share/vs/vscode/PC/queue/build/CMakeFiles/rebuild_cache.dir
