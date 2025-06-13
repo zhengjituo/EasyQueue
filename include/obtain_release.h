@@ -9,6 +9,8 @@ using QueueHandle = void*;
 template<typename T, size_t N>
 class SharedQueue {
 public:
+    using InternalPtr = std::shared_ptr<QueueCore<T, N>>;
+
     static QueueHandle ObtainQueue(size_t capacity) {
         auto q = std::make_shared<QueueCore<T, N>>(capacity);
         return reinterpret_cast<QueueHandle>(new std::shared_ptr<QueueCore<T, N>>(q));
@@ -55,17 +57,21 @@ public:
         return sp->available();
     }
 
-    static void Clear(QueueHandle handle) {
-        auto sp = get_underlying(handle);
-        sp->clear();
-    }
-
-private:
-    using InternalPtr = std::shared_ptr<QueueCore<T, N>>;
-
     static InternalPtr get_underlying(QueueHandle handle) {
         if (!handle) throw std::invalid_argument("Invalid queue handle");
         return *reinterpret_cast<InternalPtr*>(handle);
+    }
+
+    // 批量入队
+    static void BatchEnqueue(QueueHandle handle, const std::vector<std::array<T, N>>& items) {
+        auto sp = get_underlying(handle);
+        sp->batchEnqueue(items);
+    }
+
+    // 批量出队
+    static std::vector<std::array<T, N>> BatchDequeue(QueueHandle handle, size_t maxItems) {
+        auto sp = get_underlying(handle);
+        return sp->batchDequeue(maxItems);
     }
 };
 

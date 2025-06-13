@@ -13,17 +13,7 @@ public:
     explicit QueueCore(size_t capacity)
         : buffer(capacity), capacity(capacity), readPos(0), writePos(0), used(0) {}
 
-    void enqueue(const std::array<T, N>& item) {
-        std::unique_lock<std::mutex> lock(mtx);
-        cond_not_full.wait(lock, [this] { return used < capacity; });
-
-        buffer[writePos] = item;
-        writePos = (writePos + 1) % capacity;
-        ++used;
-
-        cond_not_empty.notify_one();
-    }
-
+    void enqueue(const std::array<T, N>& item);
     bool try_enqueue(const std::array<T, N>& item) {
         std::unique_lock<std::mutex> lock(mtx);
         if (used >= capacity) {
@@ -40,22 +30,50 @@ public:
         return true;
     }
 
-    std::array<T, N> dequeue() {
+    // 批量入队：将一组数据依次加入队列
+    void batchEnqueue(const std::vector<std::array<T, N>>& items) {
+        std::unique_lock<std::mutex> lock(mtx);
+        for (const auto& item : items) {
+            cond_not_full.wait(lock, [this] { return used < capacity; });
+            buffer[writePos] = item;
+            writePos = (writePos + 1) % capacity;
+            ++used;
+        }
+        cond_not_empty.notify_all();
+    }
+
+    // 批量出队：尝试取出最多 maxItems 个数据
+    std::vector<std::array<T, N>> batchDequeue(size_t maxItems) {
         std::unique_lock<std::mutex> lock(mtx);
         cond_not_empty.wait(lock, [this] { return used > 0; });
 
-        auto value = buffer[readPos];
+        std::vector<std::array<T, N>> result;
+        result.reserve(std::min(maxItems, used));
+
+        for (size_t i = 0; i < maxItems && used > 0; ++i) {
+            result.push_back(buffer[readPos]);
+            readPos = (readPos + 1) % capacity;
+            --used;
+        }
+
+        cond_not_full.notify_all();
+        return result;
+    }
+
+    std::array<T, N> dequeue() {
+        std::unique_lock<std::mutex> lock(mtx);
+        cond_not_empty.wait(lock, [this] { return used > 0; });
+        std::array<T, N> item = buffer[readPos];
         readPos = (readPos + 1) % capacity;
         --used;
 
         cond_not_full.notify_one();
-        return value;
+        return item;
     }
 
     bool try_dequeue(std::array<T, N>& out) {
         std::unique_lock<std::mutex> lock(mtx);
         if (used == 0) return false;
-
         out = buffer[readPos];
         readPos = (readPos + 1) % capacity;
         --used;
