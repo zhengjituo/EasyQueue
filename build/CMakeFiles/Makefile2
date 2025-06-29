@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/deepin2024/share/share/vs/git/EasyQueue/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/queue_core.dir/all
+all: CMakeFiles/EasyQueue.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/queue_core.dir/clean
+clean: CMakeFiles/EasyQueue.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/queue_core.dir
+# Target rules for target CMakeFiles/EasyQueue.dir
 
 # All Build rule for target.
-CMakeFiles/queue_core.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/queue_core.dir/build.make CMakeFiles/queue_core.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/queue_core.dir/build.make CMakeFiles/queue_core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/deepin2024/share/share/vs/git/EasyQueue/build/CMakeFiles --progress-num=1,2 "Built target queue_core"
-.PHONY : CMakeFiles/queue_core.dir/all
+CMakeFiles/EasyQueue.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/deepin2024/share/share/vs/git/EasyQueue/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target EasyQueue"
+.PHONY : CMakeFiles/EasyQueue.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/queue_core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/deepin2024/share/share/vs/git/EasyQueue/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/queue_core.dir/all
+CMakeFiles/EasyQueue.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deepin2024/share/share/vs/git/EasyQueue/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/EasyQueue.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/deepin2024/share/share/vs/git/EasyQueue/build/CMakeFiles 0
-.PHONY : CMakeFiles/queue_core.dir/rule
+.PHONY : CMakeFiles/EasyQueue.dir/rule
 
 # Convenience name for target.
-queue_core: CMakeFiles/queue_core.dir/rule
-.PHONY : queue_core
+EasyQueue: CMakeFiles/EasyQueue.dir/rule
+.PHONY : EasyQueue
 
 # clean rule for target.
-CMakeFiles/queue_core.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/queue_core.dir/build.make CMakeFiles/queue_core.dir/clean
-.PHONY : CMakeFiles/queue_core.dir/clean
+CMakeFiles/EasyQueue.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/clean
+.PHONY : CMakeFiles/EasyQueue.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

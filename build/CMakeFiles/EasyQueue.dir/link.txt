@@ -1,0 +1,1 @@
+/usr/bin/c++  -m64 CMakeFiles/EasyQueue.dir/src/main.cpp.o CMakeFiles/EasyQueue.dir/src/queue_handle_manager.cpp.o CMakeFiles/EasyQueue.dir/src/queue_core.cpp.o CMakeFiles/EasyQueue.dir/producer_module/producer.cpp.o CMakeFiles/EasyQueue.dir/consumer_module/consumer.cpp.o -o EasyQueue  -lpthread 

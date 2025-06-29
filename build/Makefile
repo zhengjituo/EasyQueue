@@ -117,24 +117,72 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named queue_core
+# Target rules for targets named EasyQueue
 
 # Build rule for target.
-queue_core: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 queue_core
-.PHONY : queue_core
+EasyQueue: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EasyQueue
+.PHONY : EasyQueue
 
 # fast build rule for target.
-queue_core/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/queue_core.dir/build.make CMakeFiles/queue_core.dir/build
-.PHONY : queue_core/fast
+EasyQueue/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/build
+.PHONY : EasyQueue/fast
+
+consumer_module/consumer.o: consumer_module/consumer.cpp.o
+.PHONY : consumer_module/consumer.o
+
+# target to build an object file
+consumer_module/consumer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/consumer_module/consumer.cpp.o
+.PHONY : consumer_module/consumer.cpp.o
+
+consumer_module/consumer.i: consumer_module/consumer.cpp.i
+.PHONY : consumer_module/consumer.i
+
+# target to preprocess a source file
+consumer_module/consumer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/consumer_module/consumer.cpp.i
+.PHONY : consumer_module/consumer.cpp.i
+
+consumer_module/consumer.s: consumer_module/consumer.cpp.s
+.PHONY : consumer_module/consumer.s
+
+# target to generate assembly for a file
+consumer_module/consumer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/consumer_module/consumer.cpp.s
+.PHONY : consumer_module/consumer.cpp.s
+
+producer_module/producer.o: producer_module/producer.cpp.o
+.PHONY : producer_module/producer.o
+
+# target to build an object file
+producer_module/producer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/producer_module/producer.cpp.o
+.PHONY : producer_module/producer.cpp.o
+
+producer_module/producer.i: producer_module/producer.cpp.i
+.PHONY : producer_module/producer.i
+
+# target to preprocess a source file
+producer_module/producer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/producer_module/producer.cpp.i
+.PHONY : producer_module/producer.cpp.i
+
+producer_module/producer.s: producer_module/producer.cpp.s
+.PHONY : producer_module/producer.s
+
+# target to generate assembly for a file
+producer_module/producer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/producer_module/producer.cpp.s
+.PHONY : producer_module/producer.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/queue_core.dir/build.make CMakeFiles/queue_core.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -142,7 +190,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/queue_core.dir/build.make CMakeFiles/queue_core.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -150,8 +198,56 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/queue_core.dir/build.make CMakeFiles/queue_core.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/queue_core.o: src/queue_core.cpp.o
+.PHONY : src/queue_core.o
+
+# target to build an object file
+src/queue_core.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/src/queue_core.cpp.o
+.PHONY : src/queue_core.cpp.o
+
+src/queue_core.i: src/queue_core.cpp.i
+.PHONY : src/queue_core.i
+
+# target to preprocess a source file
+src/queue_core.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/src/queue_core.cpp.i
+.PHONY : src/queue_core.cpp.i
+
+src/queue_core.s: src/queue_core.cpp.s
+.PHONY : src/queue_core.s
+
+# target to generate assembly for a file
+src/queue_core.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/src/queue_core.cpp.s
+.PHONY : src/queue_core.cpp.s
+
+src/queue_handle_manager.o: src/queue_handle_manager.cpp.o
+.PHONY : src/queue_handle_manager.o
+
+# target to build an object file
+src/queue_handle_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/src/queue_handle_manager.cpp.o
+.PHONY : src/queue_handle_manager.cpp.o
+
+src/queue_handle_manager.i: src/queue_handle_manager.cpp.i
+.PHONY : src/queue_handle_manager.i
+
+# target to preprocess a source file
+src/queue_handle_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/src/queue_handle_manager.cpp.i
+.PHONY : src/queue_handle_manager.cpp.i
+
+src/queue_handle_manager.s: src/queue_handle_manager.cpp.s
+.PHONY : src/queue_handle_manager.s
+
+# target to generate assembly for a file
+src/queue_handle_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EasyQueue.dir/build.make CMakeFiles/EasyQueue.dir/src/queue_handle_manager.cpp.s
+.PHONY : src/queue_handle_manager.cpp.s
 
 # Help Target
 help:
@@ -161,10 +257,22 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... queue_core"
+	@echo "... EasyQueue"
+	@echo "... consumer_module/consumer.o"
+	@echo "... consumer_module/consumer.i"
+	@echo "... consumer_module/consumer.s"
+	@echo "... producer_module/producer.o"
+	@echo "... producer_module/producer.i"
+	@echo "... producer_module/producer.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/queue_core.o"
+	@echo "... src/queue_core.i"
+	@echo "... src/queue_core.s"
+	@echo "... src/queue_handle_manager.o"
+	@echo "... src/queue_handle_manager.i"
+	@echo "... src/queue_handle_manager.s"
 .PHONY : help
 
 
