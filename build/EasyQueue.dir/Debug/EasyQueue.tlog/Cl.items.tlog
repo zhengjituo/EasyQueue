@@ -1,0 +1,5 @@
+V:\share\vs\git\EasyQueue\src\main.cpp;V:\share\vs\git\EasyQueue\build\EasyQueue.dir\Debug\main.obj
+V:\share\vs\git\EasyQueue\src\queue_handle_manager.cpp;V:\share\vs\git\EasyQueue\build\EasyQueue.dir\Debug\queue_handle_manager.obj
+V:\share\vs\git\EasyQueue\src\queue_core.cpp;V:\share\vs\git\EasyQueue\build\EasyQueue.dir\Debug\queue_core.obj
+V:\share\vs\git\EasyQueue\producer_module\producer.cpp;V:\share\vs\git\EasyQueue\build\EasyQueue.dir\Debug\producer.obj
+V:\share\vs\git\EasyQueue\consumer_module\consumer.cpp;V:\share\vs\git\EasyQueue\build\EasyQueue.dir\Debug\consumer.obj

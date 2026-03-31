@@ -1,0 +1,13 @@
+{
+  "models": [
+    {
+      "title": "Default Model",
+      "provider": "openai",
+      "model": "gpt-4",
+      "apiToken": ""
+    }
+  ],
+  "toolbox": {
+    "run_shell_command": true
+  }
+}
