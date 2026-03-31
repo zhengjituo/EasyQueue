@@ -1,0 +1,10 @@
+^V:\SHARE\VS\GIT\EASYQUEUE\BUILD\CMAKEFILES\983E8BC41E30DAF91B4E292ED21AF6DE\GENERATE.STAMP.RULE
+setlocal
+C:\msys64\mingw64\bin\cmake.exe -SV:/share/vs/git/EasyQueue -BV:/share/vs/git/EasyQueue/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file V:/share/vs/git/EasyQueue/build/EasyQueue.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

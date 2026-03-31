@@ -28,4 +28,6 @@ set(SOURCE_FILES
 )
 
 add_executable(EasyQueue ${SOURCE_FILES})
-target_link_libraries(EasyQueue PRIVATE pthread)
+# Windows MSVC 不需要显式链接 pthread，C++17 <thread> 已内置支持
+# target_link_libraries(EasyQueue PRIVATE pthread)
+
